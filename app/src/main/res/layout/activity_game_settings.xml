@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Category Selection -->
+            <TextView
+                android:id="@+id/textViewCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Category:"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewCategory"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioButtonHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="History"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonScience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Science"/>
+
+                <!-- Add other categories here -->
+            </RadioGroup>
+
+            <!-- Difficulty Selection -->
+            <TextView
+                android:id="@+id/textViewDifficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Difficulty:"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_below="@id/radioGroupCategory"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupDifficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewDifficulty"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioButtonEasy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Easy"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medium"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonHard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hard"/>
+            </RadioGroup>
+
+            <!-- Start Game Button -->
+            <Button
+                android:id="@+id/buttonStartGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Game"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_background"
+                android:layout_below="@id/radioGroupDifficulty"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"/>
+
+            <!-- Back to Main Menu Button -->
+            <Button
+                android:id="@+id/buttonBackToMainMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back to Main Menu"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_background"
+                android:layout_below="@id/buttonStartGame"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
